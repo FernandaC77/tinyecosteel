@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseñá tu TINY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #tipologias img {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+
+        .title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .title span {
+            font-size: 0.9em;
+            letter-spacing: 0.05em;
+            color: #777777;
+        }
+
+        #tipologias img.active {
+            display: block;
+        }
+
+        .filtros button {
+            margin: 1em 0.5em;
+            padding: 0.6em 2em;
+            border: solid 0.1em black;
+            color: black;
+            cursor: pointer;
+            font-size: 0.7em;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-family: 'Plus Jakarta Sans';
+            border-radius: 5em;
+            background-color: white;
+        }
+
+        .filtros button:hover {
+            background-color: #2b2b2b;
+            color: white;
+        }
+
+        .filtros .active {
+            background-color: #2b2b2b;
+            color: white;
+        }
+
+        .siguiente button {
+            margin-top: 2em;
+            padding: 0.5em 1em;
+            border: none;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .siguiente button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h2>Diseñá tu TINY</h2>
+        <span>ELEGÍ EL REVESTIMIENTO</span>
+    </div>
+    <div id="tipologias">
+        <img class="estandar active" src="https://tinyhouseecosteel.wordpress.com/wp-content/uploads/2024/08/variante4.png" alt="Estandar">
+        <img class="premium" src="https://tinyhouseecosteel.wordpress.com/wp-content/uploads/2024/08/variante2.png" alt="Premium">
+    </div>
+    <div class="filtros">
+        <button onclick="showImage('estandar', this)" class="active">Estandar</button>
+        <button onclick="showImage('premium', this)">Premium</button>
+    </div>
+    <div class="siguiente">
+        <button>Siguiente</button>
+    </div>
+
+    <script>
+        function showImage(type, element) {
+            // Cambiar la imagen mostrada
+            document.querySelectorAll('#tipologias img').forEach(img => {
+                img.classList.remove('active');
+            });
+            document.querySelector(#tipologias img.${type}).classList.add('active');
+
+            // Activar el botón seleccionado y desactivar los otros
+            document.querySelectorAll('.filtros button').forEach(button => {
+                button.classList.remove('active');
+            });
+            element.classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
