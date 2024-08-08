@@ -37,6 +37,11 @@
             display: block;
         }
 
+        .botones {
+            display: flex;
+            justify-content: space-between;
+        }
+
         .filtros button {
             margin: 1em 0.5em;
             padding: 0.8em 2em;
@@ -88,12 +93,14 @@
         <img class="estandar active" src="https://tinyhouseecosteel.wordpress.com/wp-content/uploads/2024/08/variante4.png" alt="Estandar">
         <img class="premium" src="https://tinyhouseecosteel.wordpress.com/wp-content/uploads/2024/08/variante2.png" alt="Premium">
     </div>
-    <div class="filtros">
-        <button onclick="showImage('estandar', this)" class="active">Estandar</button>
-        <button onclick="showImage('premium', this)">Premium</button>
-    </div>
-    <div class="siguiente">
-        <button>Siguiente</button>
+    <div class="botones">
+        <div class="filtros">
+            <button onclick="showImage('estandar', this)" class="active">Estandar</button>
+            <button onclick="showImage('premium', this)">Premium</button>
+        </div>
+        <div class="siguiente">
+            <button>Siguiente</button>
+        </div>
     </div>
 
     <script>
